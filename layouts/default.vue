@@ -2,12 +2,9 @@
 
 </script>
 <template>
+    <Header></Header>
     <div class="body">
-    <PageFooter />
-        <!-- <main>
-                <slot />
-            </main> -->
-        <div>nishi sb</div>
+        <PageFooter />
         <PageFooter />
     </div>
 </template>

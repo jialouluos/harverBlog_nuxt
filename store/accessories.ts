@@ -1,17 +1,15 @@
 import { defineStore } from "pinia";
 export default defineStore({
   id: "accessories",
-  state: () => ({
-    count: 0,
+  state: (): {
+    theme: "day" | "night";
+    lock: boolean;
+  } => ({
+    theme: "day",
+    lock: true,
   }),
-  getters: {
-    doubleCount: state => state.count * 2,
-  },
-  actions: {
-    countPlusOne() {
-      this.count++;
-    },
-  },
+  getters: {},
+  actions: {},
   persist: {
     storage: persistedState.cookiesWithOptions({
       sameSite: "strict",

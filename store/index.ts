@@ -1,2 +1,7 @@
 import useAccessory from "./accessories";
-export const useStore = () => ({ useAccessory });
+const constructor = {
+  accessory: useAccessory,
+};
+export const useStore = () => (type: "accessory") => {
+  return constructor[type]();
+};
